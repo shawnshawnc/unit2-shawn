@@ -23,7 +23,7 @@ if r == 0:
 else:
     print("Your number is odd.") """
 
-bill = float(input("Input the amount of the bill."))
+""" bill = float(input("Input the amount of the bill."))
 service = input("How was the service? 1 for bad, 2 for okay, 3 for good, 4 for great.")
 poor = 0
 almostpoor = bill*0.15
@@ -38,4 +38,17 @@ elif service == "3":
 elif service == "4":
     print(f"We reccomend you to give them a 25% tip ({mrbeast})")
 else:
-    print("YOU GAVE ME A WRONG NUMBER")
+    print("YOU GAVE ME A WRONG NUMBER") """
+
+number = int(input("Input a number"))
+
+
+def factor(n):
+    a = 1
+    c = []
+    while a != n + 1:
+        if n % a == 0:
+            c.append(a)
+        a += 1
+    return c
+print(factor(number))
