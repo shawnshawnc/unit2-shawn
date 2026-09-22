@@ -40,7 +40,8 @@ elif service == "4":
 else:
     print("YOU GAVE ME A WRONG NUMBER") """
 
-number = int(input("Input a number"))
+#number = int(input("Input a number"))
+
 
 
 def factor(n):
@@ -51,4 +52,17 @@ def factor(n):
             c.append(a)
         a += 1
     return c
-print(factor(number))
+
+n1 = int(input("Input a number"))
+n2= int(input("Input another number"))
+
+def gcf(x,y):
+    listx = factor(x)
+    listy = factor(y)
+    print(listx,listy)
+    gcfs = []
+    if listx and listy:
+        gcfs += listx
+    gcfs.remove(1)
+    return gcfs
+print(gcf(n1,n2))
