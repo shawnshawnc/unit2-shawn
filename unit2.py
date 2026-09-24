@@ -59,11 +59,25 @@ n2= int(input("Input another number"))
 def fgcf(x,y):
     listx = factor(x)
     listy = factor(y)
-    print(listx,listy)
     gcfs = []
     for number in listx and listy:
         if number in listx and listy:
             gcfs.append(number)
     return gcfs[len(gcfs)-1]
-    
-print(fgcf(n1,n2))
+
+def egcf(x,y):
+    if x>y:
+        nd = x #number used for divide
+        while nd != 0:
+            if x%nd ==0 and y%nd == 0:
+                return nd
+            else:
+                nd -= 1
+    else:
+        nd = y
+        while nd != 0:
+            if x%nd ==0 and y%nd == 0:
+                return nd
+            else:
+                nd -= 1
+print(egcf(n1,n2))
