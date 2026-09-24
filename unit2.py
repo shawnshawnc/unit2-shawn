@@ -56,17 +56,14 @@ def factor(n):
 n1 = int(input("Input a number"))
 n2= int(input("Input another number"))
 
-def gcf(x,y):
+def fgcf(x,y):
     listx = factor(x)
     listy = factor(y)
     print(listx,listy)
     gcfs = []
-    for i in range(len(listx)):
-        if len(listx) > len(listy):
-            if listx[i] == listy[y]:
-                gcf.append(listx[i])
-            
-    # for numbers in listx and listy:
-    #     gcfs.append(numbers)
-    return gcfs
-print(gcf(n1,n2))
+    for number in listx and listy:
+        if number in listx and listy:
+            gcfs.append(number)
+    return gcfs[len(gcfs)-1]
+    
+print(fgcf(n1,n2))
