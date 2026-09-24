@@ -61,8 +61,12 @@ def gcf(x,y):
     listy = factor(y)
     print(listx,listy)
     gcfs = []
-    if listx and listy:
-        gcfs += listx
-    gcfs.remove(1)
+    for i in range(len(listx)):
+        if len(listx) > len(listy):
+            if listx[i] == listy[y]:
+                gcf.append(listx[i])
+            
+    # for numbers in listx and listy:
+    #     gcfs.append(numbers)
     return gcfs
 print(gcf(n1,n2))
